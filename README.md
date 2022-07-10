@@ -12,3 +12,5 @@ All that is required is a Java compiler, you can install one here https://www.or
 
 # Running the script to obtain the CSV file
 To utilize the Main file, enter 2 files into the arguements pertaining to the absolute path of the file. The output of the file will show the mismatched lines and will output a file titled "./mismatch.csv".
+
+Alternatively, you can edit line 20 and line 31, "args[0]" and "args[1]" to the absolute path of your desired file.
