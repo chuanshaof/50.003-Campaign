@@ -1,10 +1,12 @@
+package app.src.main;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main {
+public class App {
 
     // Description: Consider a CSV file that stores a list of records (e.g., records of bank accounts).
     // You are required to write a software program that reads two such CSV files, compares records
@@ -17,9 +19,10 @@ public class Main {
         ArrayList<String> output = new ArrayList<>();
 
         try {
-            Scanner scanner1 = new Scanner(args[0]);
+            File file0 = new File("./" + args[0]);
+            Scanner scanner1 = new Scanner(file0);
             scanner1.useDelimiter(",");
-            while (scanner1.hasNextLine()) {
+            while (scanner1.hasNext()) {
                 csv1.add(scanner1.nextLine());
             }
             scanner1.close();
@@ -28,9 +31,10 @@ public class Main {
         }
 
         try {
-            Scanner scanner2 = new Scanner(args[1]);
+            File file1 = new File("./" + args[1]);
+            Scanner scanner2 = new Scanner(file1);
             scanner2.useDelimiter(",");
-            while (scanner2.hasNextLine()) {
+            while (scanner2.hasNext()) {
                 csv2.add(scanner2.nextLine());
             }
             scanner2.close();
@@ -43,7 +47,7 @@ public class Main {
             String str2 = csv2.get(i);
 
             if (!str1.equals(str2)) {
-                output.add(str1 + "," + str2);
+                output.add(str1 + "\n" + str2);
             }
         }
 
