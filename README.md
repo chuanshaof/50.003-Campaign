@@ -16,3 +16,6 @@ To utilize the Main file, enter 2 files into the arguements pertaining to the ab
 The command line terminal command to run is "java App.java sample_file_1.csv sample_file_3.csv"
 
 Alternatively, you can edit line 20 and line 31, "args[0]" and "args[1]" to the absolute path of your desired file.
+
+# JUnit Testing
+This project uses JUnit5 and VSCode to run. Simply download the extension for testing and press the "play" button to run the test cases.
